@@ -1,6 +1,6 @@
 # Integrantes
-## Fabián Pizarro
-## Kevin Vera
+- Fabián Pizarro
+- Kevin Vera
 
 # Entrega Final
 
