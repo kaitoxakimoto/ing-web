@@ -1,0 +1,41 @@
+
+{
+    "derechos": [
+        {
+            "id": 1,
+            "nombre": "derecho1",
+            "descripcion": "A la identidad y la familia",
+            "imagen": "/assets/img/derechos/der1.png"
+        },
+        {
+            "id": 2,
+            "nombre": "derecho1",
+            "descripcion": "A expresarse libremente y el acceso a la información",
+            "imagen": "/assets/img/derechos/der2.png"
+        },
+        {
+            "id": 3,
+            "nombre": "derecho2",
+            "descripcion": "A la protección contra el abuso y la discriminación",
+            "imagen": "/assets/img/derechos/der3.png"
+        },
+        {
+            "id": 4,
+            "nombre": "derecho3",
+            "descripcion": "A la educación",
+            "imagen": "/assets/img/derechos/der4.png"
+        },
+        {
+            "id": 5,
+            "nombre": "derecho4",
+            "descripcion": "A una vida segura y sana",
+            "imagen": "/assets/img/derechos/der5.png"
+        },
+        {
+            "id": 6,
+            "nombre": "derecho5",
+            "descripcion": "A la atención especial en caso de estar impedidos",
+            "imagen": "/assets/img/derechos/der6.png"
+        }
+    ]
+}

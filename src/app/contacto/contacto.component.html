@@ -1,0 +1,87 @@
+<div
+  class="container col-xxl-8 px-4 py-5"
+  id="contacto"
+  *ngIf="tipo.tipo == 'user'"
+>
+  <form [formGroup]="contactoForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Nombre</label>
+      <input
+        class="form-control"
+        formControlName="nombre"
+        type="text"
+        placeholder="Nombre"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        formControlName="email"
+        aria-describedby="emailHelp"
+        placeholder="Enter email"
+      />
+      <small id="emailHelp" class="form-text text-muted"
+        >Nunca compartiremos tu email, con nadie ;)</small
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Cuentanos tu mensaje!</label>
+      <textarea
+        class="form-control"
+        formControlName="mensaje"
+        id="exampleFormControlTextarea1"
+        rows="3"
+      ></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+</div>
+<div class="container col-xxl-8 px-4 py-5" *ngIf="tipo.tipo == 'admin'">
+  <h1 class="h5 mb-3">
+    Bienvenido al menú de administrador!
+  </h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Usuario</th>
+        <th>Email</th>
+        <th>Mensaje</th>
+        <th>Acción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let mensaje of datos">
+        <td>{{ mensaje.nombre }}</td>
+        <td>{{ mensaje.email }}</td>
+        <td>{{ mensaje.mensaje }}</td>
+        <td>
+          <button
+            type="submit"
+            id="{{mensaje._id}}"
+            (click)="borrarMensaje($event)"
+            class="btn btn-sm btn-danger"
+          >
+            Borrar Mensaje
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div
+  class="container col-xxl-8 px-4 py-5 text-center"
+  *ngIf="tipo.tipo == 'none'"
+>
+  <h1 class="h5 mb-3">
+    Para ingresar a esta sección y enviar mensajes, necesitar haber iniciado una
+    sesión
+  </h1>
+  <button class="btn btn-primary" routerLink="/login">
+    Ir a inicio de Sesión
+  </button>
+</div>
